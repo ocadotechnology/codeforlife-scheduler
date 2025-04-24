@@ -12,6 +12,12 @@ SCHEDULES: ServiceTaskSchedules = {
             "task": "api.tasks.session.clear",
             "schedule": 5,  # crontab(hour=16),
         }
+    },
+    "portal": {
+        "clear_sessions": {
+            "task": "src.sso.tasks.session.clear",
+            "schedule": 5,  # crontab(hour=16),
+        }
     }
 }
 
