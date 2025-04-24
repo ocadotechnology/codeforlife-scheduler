@@ -9,7 +9,7 @@ jobs:
   get-service-names:
     runs-on: ubuntu-22.04
     outputs:
-      service-names: ${{ steps.get-service-names.outputs.service-names }}
+      service-names: ${{ steps.get-service-names.outputs.value }}
     steps:
       - name: 🐍 Set up Python 3.12 Environment
         uses: ocadotechnology/codeforlife-workspace/.github/actions/python/setup-environment@main
@@ -19,8 +19,8 @@ jobs:
       - name: Get Service Names
         id: get-service-names
         run: |
-          service_names=$(pipenv run python schedules.py)
-          echo "service-names=$service-names" >> $GITHUB_OUTPUT
+          value=$(pipenv run python schedules.py)
+          echo "value=$value" >> $GITHUB_OUTPUT
 
   main:
     runs-on: ubuntu-22.04
