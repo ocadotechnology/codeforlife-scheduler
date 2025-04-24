@@ -30,6 +30,7 @@ class TaskSchedule(t.TypedDict):
 
 
 TaskSchedules = t.Dict[str, TaskSchedule]
+ServiceTaskSchedules = t.Dict[str, TaskSchedules]
 
 
 class TaskRoute(t.TypedDict):
@@ -56,7 +57,7 @@ class PredefinedQueue(t.TypedDict):
 PredefinedQueues = t.Dict[str, PredefinedQueue]
 
 
-def configure_celery(service_task_schedules: t.Dict[str, TaskSchedules]):
+def configure_celery(service_task_schedules: ServiceTaskSchedules):
     """Configure Celery by adding each service's:
     1. Predefined SQS queue.
     2. Task schedules.
@@ -66,8 +67,6 @@ def configure_celery(service_task_schedules: t.Dict[str, TaskSchedules]):
         service_task_schedules: The name and task schedules for each service.
     """
 
-    celery_beat_schedule = t.cast(TaskSchedules, CELERY_BEAT_SCHEDULE)
-    celery_task_routes = t.cast(TaskRoutes, CELERY_TASK_ROUTES)
     predefined_queues = t.cast(
         PredefinedQueues, CELERY_BROKER_TRANSPORT_OPTIONS["predefined_queues"]
     )
@@ -76,10 +75,10 @@ def configure_celery(service_task_schedules: t.Dict[str, TaskSchedules]):
         # Add beat schedule.
         for name, task_schedule in task_schedules.items():
             task_schedule["task"] = f"{service}.{task_schedule['task']}"
-            celery_beat_schedule[f"{service}.{name}"] = task_schedule
+            CELERY_BEAT_SCHEDULE[f"{service}.{name}"] = task_schedule
 
         # Add task route.
-        celery_task_routes[f"{service}.*"] = {"queue": service}
+        CELERY_TASK_ROUTES[f"{service}.*"] = {"queue": service}
 
         # Add predefined queue.
         predefined_queues[service] = {

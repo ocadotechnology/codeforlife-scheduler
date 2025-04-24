@@ -6,11 +6,29 @@ on:
   workflow_dispatch:
 
 jobs:
+  get-service-names:
+    runs-on: ubuntu-22.04
+    outputs:
+      service-names: ${{ steps.get-service-names.outputs.service-names }}
+    steps:
+      - name: 🐍 Set up Python 3.12 Environment
+        uses: ocadotechnology/codeforlife-workspace/.github/actions/python/setup-environment@main
+        with:
+          python-version: 3.12
+
+      - name: Get Service Names
+        id: get-service-names
+        run: |
+          service_names=$(pipenv run python schedules.py)
+          echo "service-names=$service-names" >> $GITHUB_OUTPUT
+
   main:
     runs-on: ubuntu-22.04
+    needs: [get-service-names]
     steps:
       - name: 🏗️ Create AWS Resources
         uses: ocadotechnology/codeforlife-workspace/.github/actions/aws/create-resources@workspace-220 # TODO: set to @main
         with:
           django: false
-          sqs-queues: "contributor"
+          sqs-queues: ${{ needs.get-service-names.outputs.service-names }}
+          s3-buckets: ${{ needs.get-service-names.outputs.service-names }}

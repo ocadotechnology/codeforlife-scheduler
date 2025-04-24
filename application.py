@@ -9,21 +9,13 @@ from celery import Celery  # isort: skip
 
 import settings
 from utils import configure_celery
+from schedules import SCHEDULES
 
 
 def main():
     """Entry point."""
 
-    configure_celery(
-        {
-            "contributor": {
-                "clear_sessions": {
-                    "task": "api.tasks.session.clear",
-                    "schedule": 5,  # crontab(hour=16),
-                }
-            }
-        }
-    )
+    configure_celery(SCHEDULES)
 
     app = Celery()
     app.config_from_object(settings, namespace="CELERY")
