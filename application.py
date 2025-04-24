@@ -8,14 +8,13 @@ A worker for the celery beat.
 from celery import Celery  # isort: skip
 
 import settings
-from utils import configure_celery
-from schedules import SCHEDULES
+from src.utils import configure_celery
 
 
 def main():
     """Entry point."""
 
-    configure_celery(SCHEDULES)
+    configure_celery()
 
     app = Celery()
     app.config_from_object(settings, namespace="CELERY")
