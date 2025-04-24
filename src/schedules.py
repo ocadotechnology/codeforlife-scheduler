@@ -23,5 +23,5 @@ SCHEDULES: t.Dict[str, "TaskSchedules"] = {
             "task": "src.sso.tasks.session.clear",
             "schedule": crontab(hour=16),
         }
-    }
+    },
 }

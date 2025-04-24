@@ -12,7 +12,7 @@ from settings import (
     CELERY_BEAT_SCHEDULE,
     CELERY_BROKER_TRANSPORT_OPTIONS,
     CELERY_TASK_ROUTES,
-    ENV
+    ENV,
 )
 
 from .schedules import SCHEDULES
@@ -32,7 +32,7 @@ def configure_celery():
     """
 
     predefined_queues = t.cast(
-        PredefinedQueues, CELERY_BROKER_TRANSPORT_OPTIONS["predefined_queues"]
+        "PredefinedQueues", CELERY_BROKER_TRANSPORT_OPTIONS["predefined_queues"]
     )
 
     for service, task_schedules in SCHEDULES.items():
