@@ -13,4 +13,4 @@ jobs:
         uses: ocadotechnology/codeforlife-workspace/.github/actions/aws/create-resources@workspace-220 # TODO: set to @main
         with:
           django: false
-          # sqs-queues: ""
+          sqs-queues: "contributor"
