@@ -27,3 +27,4 @@ jobs:
     with:
       django: false
       aws-sqs-queues: ${{ needs.get-service-names.outputs.service-names }}
+      source-path: src # TODO: delete
