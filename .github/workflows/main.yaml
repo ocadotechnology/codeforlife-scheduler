@@ -11,10 +11,8 @@ jobs:
     outputs:
       service-names: ${{ steps.get-service-names.outputs.value }}
     steps:
-      - name: 🐍 Set up Python 3.12 Environment
+      - name: 🐍 Set up Python Environment
         uses: ocadotechnology/codeforlife-workspace/.github/actions/python/setup-environment@main
-        with:
-          python-version: 3.12
 
       - name: Get Service Names
         id: get-service-names
@@ -23,12 +21,9 @@ jobs:
           echo "value=$value" >> $GITHUB_OUTPUT
 
   main:
-    runs-on: ubuntu-22.04
+    uses: ocadotechnology/codeforlife-workspace/.github/workflows/backend.yaml@workspace-220 # TODO: set to @main
     needs: [get-service-names]
-    steps:
-      - name: 🏗️ Create AWS Resources
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/aws/create-resources@workspace-220 # TODO: set to @main
-        with:
-          django: false
-          sqs-queues: ${{ needs.get-service-names.outputs.service-names }}
-          s3-buckets: ${{ needs.get-service-names.outputs.service-names }}
+    secrets: inherit
+    with:
+      django: false
+      aws-sqs-queues: ${{ needs.get-service-names.outputs.service-names }}
