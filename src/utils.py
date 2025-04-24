@@ -12,11 +12,13 @@ from settings import (
     CELERY_BEAT_SCHEDULE,
     CELERY_BROKER_TRANSPORT_OPTIONS,
     CELERY_TASK_ROUTES,
-    ENV,
-    SCHEDULES
+    ENV
 )
 
-from .types import PredefinedQueues
+from .schedules import SCHEDULES
+
+if t.TYPE_CHECKING:
+    from .types import PredefinedQueues
 
 
 def configure_celery():
