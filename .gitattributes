@@ -1,6 +1,5 @@
 Pipfile export-ignore
 Pipfile.lock export-ignore
-manage.py export-ignore
 **/.* export-ignore
 **/*.json export-ignore
 **/*.yaml export-ignore
@@ -8,4 +7,3 @@ manage.py export-ignore
 **/*.toml export-ignore
 **/*.code-* export-ignore
 **/*.md export-ignore
-scripts export-ignore
