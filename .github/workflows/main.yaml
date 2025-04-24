@@ -16,9 +16,7 @@ jobs:
 
       - name: Get Service Names
         id: get-service-names
-        run: |
-          value=$(pipenv run python schedules.py)
-          echo "value=$value" >> $GITHUB_OUTPUT
+        run: echo "value=$(pipenv run python schedules.py)" >> $GITHUB_OUTPUT
 
   main:
     uses: ocadotechnology/codeforlife-workspace/.github/workflows/backend.yaml@workspace-220 # TODO: set to @main
