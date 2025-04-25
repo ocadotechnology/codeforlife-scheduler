@@ -14,7 +14,7 @@ if t.TYPE_CHECKING:
 SCHEDULES: "ServiceTaskSchedules" = {
     "contributor": {
         "clear_sessions": {
-            "task": "api.tasks.session.clear",
+            "task": "src.tasks.session.clear",
             "schedule": crontab(hour=16),
         }
     },
