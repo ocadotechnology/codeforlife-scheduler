@@ -7,13 +7,6 @@ import os
 import typing as t
 
 from codeforlife.tasks import get_local_sqs_url
-from settings import (
-    AWS_REGION,
-    CELERY_BEAT_SCHEDULE,
-    CELERY_BROKER_TRANSPORT_OPTIONS,
-    CELERY_TASK_ROUTES,
-    ENV,
-)
 
 from .schedules import SCHEDULES
 
@@ -30,6 +23,15 @@ def configure_celery():
     Args:
         service_task_schedules: The name and task schedules for each service.
     """
+
+    # pylint: disable-next=import-outside-toplevel
+    from settings import (  # type: ignore[attr-defined]
+        AWS_REGION,
+        CELERY_BEAT_SCHEDULE,
+        CELERY_BROKER_TRANSPORT_OPTIONS,
+        CELERY_TASK_ROUTES,
+        ENV,
+    )
 
     predefined_queues = t.cast(
         "PredefinedQueues", CELERY_BROKER_TRANSPORT_OPTIONS["predefined_queues"]
