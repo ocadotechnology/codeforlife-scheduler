@@ -8,10 +8,10 @@ import typing as t
 from celery.schedules import crontab
 
 if t.TYPE_CHECKING:
-    from .types import TaskSchedules
+    from .types import ServiceTaskSchedules
 
 
-SCHEDULES: t.Dict[str, "TaskSchedules"] = {
+SCHEDULES: "ServiceTaskSchedules" = {
     "contributor": {
         "clear_sessions": {
             "task": "api.tasks.session.clear",

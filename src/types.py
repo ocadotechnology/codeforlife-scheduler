@@ -22,6 +22,7 @@ class TaskSchedule(t.TypedDict):
 
 
 TaskSchedules = t.Dict[str, TaskSchedule]
+ServiceTaskSchedules = t.Dict[str, TaskSchedules]
 
 
 class TaskRoute(t.TypedDict):
