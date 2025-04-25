@@ -21,7 +21,7 @@ jobs:
           from src.schedules import SCHEDULES
           print(','.join(SCHEDULES.keys()))
           "
-          echo "value=$(pipenv run python -c $py_command)" >> $GITHUB_OUTPUT
+          echo "value=$(pipenv run python -c "$py_command")" >> $GITHUB_OUTPUT
 
   main:
     uses: ocadotechnology/codeforlife-workspace/.github/workflows/backend.yaml@workspace-220 # TODO: set to @main
