@@ -7,3 +7,5 @@ Pipfile.lock export-ignore
 **/*.toml export-ignore
 **/*.code-* export-ignore
 **/*.md export-ignore
+**/*_test.py export-ignore
+**/test_*.py export-ignore
