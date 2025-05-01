@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/ocadotechnology/codeforlife-scheduler/compare/v1.0.0...v1.0.1) (2025-05-01)
+
+
+### Bug Fixes
+
+* ignore test files ([33471c6](https://github.com/ocadotechnology/codeforlife-scheduler/commit/33471c63d8d74bc6567f6e0d11f17c04e9e1c071))
+
 # 1.0.0 (2025-05-01)
 
 
