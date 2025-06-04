@@ -49,7 +49,7 @@ def configure_celery():
         # Add predefined queue.
         predefined_queues[service] = {
             "url": (
-                os.environ[f"{service.upper()}_SQS_URL"]
+                os.environ[f"{service.replace('-', '_').upper()}_SQS_URL"]
                 if ENV != "local"
                 else get_local_sqs_url(AWS_REGION, service)
             )
