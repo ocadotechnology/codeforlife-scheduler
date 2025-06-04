@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/ocadotechnology/codeforlife-scheduler-backend/compare/v1.0.1...v1.0.2) (2025-06-04)
+
+
+### Bug Fixes
+
+* env var keys ([035f8d5](https://github.com/ocadotechnology/codeforlife-scheduler-backend/commit/035f8d5280c09516772cdf98e7465548d4d5d8f7))
+
 ## [1.0.1](https://github.com/ocadotechnology/codeforlife-scheduler/compare/v1.0.0...v1.0.1) (2025-05-01)
 
 
