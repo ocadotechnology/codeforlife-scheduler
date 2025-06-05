@@ -1,3 +1,11 @@
+## [1.0.3](https://github.com/ocadotechnology/codeforlife-scheduler-backend/compare/v1.0.2...v1.0.3) (2025-06-05)
+
+
+### Bug Fixes
+
+* legacy system ([05c320a](https://github.com/ocadotechnology/codeforlife-scheduler-backend/commit/05c320aaec9dfbfb74024215d0ede96ce269083e))
+* new py package ([26f0527](https://github.com/ocadotechnology/codeforlife-scheduler-backend/commit/26f052754e82cafed0bab17260d546ee2cf29451))
+
 ## [1.0.2](https://github.com/ocadotechnology/codeforlife-scheduler-backend/compare/v1.0.1...v1.0.2) (2025-06-04)
 
 
