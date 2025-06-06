@@ -37,8 +37,10 @@ def configure_celery():
     for service, task_schedules in SCHEDULES.items():
         # Add beat schedule.
         for name, task_schedule in task_schedules.items():
-            task_schedule["task"] = f"{service}.{task_schedule['task']}"
-            beat_schedule[f"{service}.{name}"] = task_schedule
+            beat_schedule[f"{service}.{name}"] = {
+                **task_schedule,
+                "task": f"{service}.{task_schedule['task']}",
+            }
 
         # Add task route.
         task_routes[f"{service}.*"] = {"queue": service}
