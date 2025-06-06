@@ -3,6 +3,7 @@
 Created on 25/04/2025 at 08:45:32(+01:00).
 """
 
+import typing as t
 from unittest import TestCase
 from unittest.mock import patch
 
@@ -53,7 +54,9 @@ class TestUtils(TestCase):
                 **CELERY_BROKER_TRANSPORT_OPTIONS,
                 "predefined_queues": {
                     "service1": {
-                        "url": get_local_sqs_url(AWS_REGION, "service1")
+                        "url": get_local_sqs_url(
+                            t.cast(str, AWS_REGION), "service1"
+                        )
                     }
                 },
             },
