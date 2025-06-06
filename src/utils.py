@@ -51,6 +51,6 @@ def configure_celery():
             "url": (
                 os.environ[f"{service.replace('-', '_').upper()}_SQS_URL"]
                 if ENV != "local"
-                else get_local_sqs_url(AWS_REGION, service)
+                else get_local_sqs_url(t.cast(str, AWS_REGION), service)
             )
         }
