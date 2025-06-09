@@ -1,3 +1,14 @@
+## [1.0.4](https://github.com/ocadotechnology/codeforlife-scheduler-backend/compare/v1.0.3...v1.0.4) (2025-06-09)
+
+
+### Bug Fixes
+
+* configure celery ([17b49a0](https://github.com/ocadotechnology/codeforlife-scheduler-backend/commit/17b49a05b220e3eb883c1ff11864cf8aec22a185))
+* copy object ([e23ee8b](https://github.com/ocadotechnology/codeforlife-scheduler-backend/commit/e23ee8bf6b5a3412d85270604ff6ce90f785431a))
+* server ([566ff19](https://github.com/ocadotechnology/codeforlife-scheduler-backend/commit/566ff19e3324e31697f5b78a55384d184e275d93))
+* type ([e92e904](https://github.com/ocadotechnology/codeforlife-scheduler-backend/commit/e92e9042a3bd662682b60bb4b2e64fb8ec8710d6))
+* types ([8759079](https://github.com/ocadotechnology/codeforlife-scheduler-backend/commit/875907906979cca9027a6ce0af58c57da5b330fc))
+
 ## [1.0.3](https://github.com/ocadotechnology/codeforlife-scheduler-backend/compare/v1.0.2...v1.0.3) (2025-06-05)
 
 
