@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/ocadotechnology/codeforlife-scheduler-backend/compare/v1.0.4...v1.0.5) (2025-06-09)
+
+
+### Bug Fixes
+
+* new cfl package ([51f37af](https://github.com/ocadotechnology/codeforlife-scheduler-backend/commit/51f37aff9f93ddb42b2a0bf5635146229768e1c3))
+
 ## [1.0.4](https://github.com/ocadotechnology/codeforlife-scheduler-backend/compare/v1.0.3...v1.0.4) (2025-06-09)
 
 
