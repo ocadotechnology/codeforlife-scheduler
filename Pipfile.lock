@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7da70d53d2e0607e4a34b45e75d910e617af7574afa9d2bb4244a6008d4e3fa4"
+            "sha256": "44af5d8279c562983e3b81461919d32bdb65d975caea02b4f48bf0c12d33b70f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -302,12 +302,12 @@
         },
         "codeforlife": {
             "hashes": [
-                "sha256:4d98c011b8ae3997c441eed1b5e06e5c56007d2184635ba3a0dba5ab0871a9e3",
-                "sha256:55a5893926016204d79093e61e527b4757aaa12c3aabe6c3475bed78725cdf75"
+                "sha256:16c0160f51964efdbecde7024916a3fbf4ab080a3d533e63786ecc99a5092af3",
+                "sha256:21b7b0c0a9073da62429cbff5ddbfadfb9eb12f53b80226155785edb91666b0f"
             ],
             "index": "pypi",
             "markers": "python_version == '3.12'",
-            "version": "==0.27.8"
+            "version": "==0.27.9"
         },
         "codeforlife-portal": {
             "hashes": [
@@ -497,11 +497,11 @@
                 "s3"
             ],
             "hashes": [
-                "sha256:69aca94d26e6714d14ad63f33d13619e697508ee33ede184e462ed766dc2a73f",
-                "sha256:d61930acb4a25e3aebebc6addaf946a3b1df31c803a6bf1af2f31c9047febaa3"
+                "sha256:11b7b6200e1cb5ffcd9962bd3673a39c7d6a6109e8096f0e03d46fab3d3aabd9",
+                "sha256:7a25ce8f4214f69ac9c7ce87e2603887f7ae99326c316bc8d2d75375e09341c9"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==1.14.4"
+            "version": "==1.14.6"
         },
         "django-treebeard": {
             "hashes": [
@@ -1864,12 +1864,12 @@
         },
         "codeforlife": {
             "hashes": [
-                "sha256:4d98c011b8ae3997c441eed1b5e06e5c56007d2184635ba3a0dba5ab0871a9e3",
-                "sha256:55a5893926016204d79093e61e527b4757aaa12c3aabe6c3475bed78725cdf75"
+                "sha256:16c0160f51964efdbecde7024916a3fbf4ab080a3d533e63786ecc99a5092af3",
+                "sha256:21b7b0c0a9073da62429cbff5ddbfadfb9eb12f53b80226155785edb91666b0f"
             ],
             "index": "pypi",
             "markers": "python_version == '3.12'",
-            "version": "==0.27.8"
+            "version": "==0.27.9"
         },
         "codeforlife-portal": {
             "hashes": [
@@ -2148,11 +2148,11 @@
                 "s3"
             ],
             "hashes": [
-                "sha256:69aca94d26e6714d14ad63f33d13619e697508ee33ede184e462ed766dc2a73f",
-                "sha256:d61930acb4a25e3aebebc6addaf946a3b1df31c803a6bf1af2f31c9047febaa3"
+                "sha256:11b7b6200e1cb5ffcd9962bd3673a39c7d6a6109e8096f0e03d46fab3d3aabd9",
+                "sha256:7a25ce8f4214f69ac9c7ce87e2603887f7ae99326c316bc8d2d75375e09341c9"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==1.14.4"
+            "version": "==1.14.6"
         },
         "django-stubs": {
             "extras": [
