@@ -28,5 +28,4 @@ jobs:
     needs: [get-service-names]
     secrets: inherit
     with:
-      django: false
       aws-sqs-queues: ${{ needs.get-service-names.outputs.service-names }}
