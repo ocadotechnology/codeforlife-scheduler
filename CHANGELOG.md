@@ -1,3 +1,11 @@
+## [1.0.6](https://github.com/ocadotechnology/codeforlife-scheduler-backend/compare/v1.0.5...v1.0.6) (2025-06-10)
+
+
+### Bug Fixes
+
+* django and new cfl package ([be91322](https://github.com/ocadotechnology/codeforlife-scheduler-backend/commit/be913223fca12185e0323eeb584f61d57931df7c))
+* new release ([a7ecba7](https://github.com/ocadotechnology/codeforlife-scheduler-backend/commit/a7ecba7d5532f47be3501d9037388dc9de01741c))
+
 ## [1.0.5](https://github.com/ocadotechnology/codeforlife-scheduler-backend/compare/v1.0.4...v1.0.5) (2025-06-09)
 
 
