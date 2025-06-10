@@ -72,7 +72,7 @@ SCHEDULES: "ServiceTaskSchedules" = {
     #     },
     # },
     # pylint: enable=line-too-long
-    # Legacy system (TODO: delete this when we stop deploying the legacy system)
+    # Legacy system(TODO: delete this when we stop deploying the legacy system)
     "legacy-system": {
         "first_verify_email_reminder": {
             "task": "tasks.first_verify_email_reminder",
